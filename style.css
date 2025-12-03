@@ -14,7 +14,7 @@
 
 
 .function{
-    flex: 5 1 auto;
+    flex: 2 1 auto;
     display: flex;
 }
 
@@ -41,6 +41,9 @@
   background-color: yellow;
   flex: auto;
   margin: 2px;
+  font-size: 40px;
+  text-align: center;
+
 }
 
 .operators{
@@ -53,4 +56,6 @@
    background-color: pink;
    flex: auto;
    margin: 2px;
+   font-size: 40px;
+   text-align: center;
 }
