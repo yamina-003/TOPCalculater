@@ -7,19 +7,18 @@
 }
 
 .display{
-  background-color: red;
+  background-color: orchid;
   flex: auto;
+  margin: 2px;
 }
 
 
 .function{
-    background-color: black;
     flex: 5 1 auto;
     display: flex;
 }
 
 .digits{
-  background-color: orange;
   flex: 3 1 auto;
   display: flex;
   flex-direction: column;
@@ -27,19 +26,31 @@
 
 .row{
   flex: auto;
-  
+  display: flex;  
 }
 
 .top{
-  background-color: orchid;
+  
 }
 
 .mid{
-  background-color: purple;
+
+}
+
+.digit{
+  background-color: yellow;
+  flex: auto;
+  margin: 2px;
 }
 
 .operators{
-  background-color: blue;
   flex:  auto;
+  display: flex;
+  flex-direction: column;
+}
 
+.operator{
+   background-color: pink;
+   flex: auto;
+   margin: 2px;
 }
