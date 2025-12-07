@@ -20,3 +20,17 @@ function divide(x, y){
     return 'ERROR';
 }
 
+let x;
+let y;
+let opt;
+
+function operate(x, y, opt){
+    switch(opt){
+        case '+': return x + y;
+        case '-': return x - y;
+        case '*': return x * y;
+        case '/': return x/y
+    }
+}
+
+//console.log(operate(5, 6, '/'));
