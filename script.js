@@ -33,4 +33,28 @@ function operate(x, y, opt){
     }
 }
 
+
+
 //console.log(operate(5, 6, '/'));
+
+let display = document.querySelector('.display');
+display.textContent = ""
+
+let number = document.querySelectorAll(".digit");
+number.forEach((button)=> {
+    button.addEventListener("click" , () =>{
+        display.textContent = appendNumber(button.textContent)
+    
+})   
+});
+
+let operator = document.querySelectorAll(".operator");
+operator.forEach((button)=> {
+    button.addEventListener("click", ()=>{
+        display.textContent = button.textContent;
+    })
+});
+
+function appendNumber(digit){
+    return display.textContent += digit;
+}

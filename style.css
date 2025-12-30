@@ -29,13 +29,7 @@
   display: flex;  
 }
 
-.top{
-  
-}
 
-.mid{
-
-}
 
 .digit{
   background-color: yellow;
@@ -52,10 +46,16 @@
   flex-direction: column;
 }
 
-.operator{
+.operator,
+.clear,
+.display{
    background-color: pink;
    flex: auto;
    margin: 2px;
    font-size: 40px;
    text-align: center;
+}
+
+.display{
+  text-align: left;
 }
