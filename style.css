@@ -48,7 +48,8 @@
 
 .operator,
 .clear,
-.display{
+.display,
+.result{
    background-color: pink;
    flex: auto;
    margin: 2px;

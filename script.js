@@ -1,39 +1,16 @@
-
-
-function add(x, y ){
-   return x + y;
-}
-
-function substract(x, y){
-    return x - y;
-}
-
-function multiply(x, y){
-    return x*y;
-}
-
-function divide(x, y){
-    if (y !== 0){
-        return x / y;
-    }
-
-    return 'ERROR';
-}
-
 let x;
 let y;
 let opt;
 
 function operate(x, y, opt){
     switch(opt){
-        case '+': return x + y;
-        case '-': return x - y;
-        case '*': return x * y;
-        case '/': return x/y
+        case "+": result = x + y; break;
+        case "-": result = x - y; break;
+        case "*": result = x * y; break;
+        case "/": result = x/y; break;
     }
+    return result;
 }
-
-
 
 //console.log(operate(5, 6, '/'));
 
@@ -45,16 +22,34 @@ number.forEach((button)=> {
     button.addEventListener("click" , () =>{
         display.textContent = appendNumber(button.textContent)
     
-})   
-});
-
+    })   
+})
 let operator = document.querySelectorAll(".operator");
 operator.forEach((button)=> {
     button.addEventListener("click", ()=>{
-        display.textContent = button.textContent;
+        x = parseInt(display.textContent);
+        display.textContent = ""
+        opt = button.textContent.trim();
     })
 });
 
 function appendNumber(digit){
     return display.textContent += digit;
 }
+
+let result = document.querySelector(".result");
+result.addEventListener("click",() =>{
+    y = parseInt(display.textContent);
+
+    let finalResult = operate(x, y, opt);
+    display.textContent = finalResult;
+    console.log("x:", x);
+    console.log("y:", y);
+    console.log("opt:", opt);
+    
+})
+
+let clearButton = document.querySelector(".clear");
+clearButton.addEventListener("click", ()=>{
+    display.textContent = "";
+})
